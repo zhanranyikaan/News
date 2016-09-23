@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		771963802FFAF7260429ABC4 /* libPods-网易新闻练手.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A9D64092BD57B1D26F2587 /* libPods-网易新闻练手.a */; };
+		C566CEAA1D93D4210008A31B /* HNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C566CEA91D93D4210008A31B /* HNewsCell.m */; };
+		C566CEAD1D94127A0008A31B /* HChannelLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C566CEAC1D94127A0008A31B /* HChannelLabel.m */; };
+		C566CEB01D9412D60008A31B /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = C566CEAF1D9412D60008A31B /* topic_news.json */; };
+		C566CEB31D9414060008A31B /* HChannelLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = C566CEB21D9414060008A31B /* HChannelLabelView.m */; };
+		C566CEB61D9414570008A31B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C566CEB51D9414570008A31B /* Main.storyboard */; };
+		C566CEB91D9415D40008A31B /* HChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = C566CEB81D9415D40008A31B /* HChannelController.m */; };
+		C566CEBF1D9417930008A31B /* UIView+HMExt.m in Sources */ = {isa = PBXBuildFile; fileRef = C566CEBE1D9417930008A31B /* UIView+HMExt.m */; };
+		C5D4DE1F1D94AC6D00B7CE9E /* HMoreImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D4DE1E1D94AC6D00B7CE9E /* HMoreImage.m */; };
+		C5D4DE221D94B3F000B7CE9E /* HChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D4DE211D94B3F000B7CE9E /* HChannelCell.m */; };
+		C5EBD1721D939EAB005256C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EBD1711D939EAB005256C5 /* main.m */; };
+		C5EBD1751D939EAB005256C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EBD1741D939EAB005256C5 /* AppDelegate.m */; };
+		C5EBD17D1D939EAB005256C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5EBD17C1D939EAB005256C5 /* Assets.xcassets */; };
+		C5EBD1801D939EAB005256C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5EBD17E1D939EAB005256C5 /* LaunchScreen.storyboard */; };
+		C5EBD1881D939ED9005256C5 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5EBD1871D939ED9005256C5 /* News.storyboard */; };
+		C5EBD18B1D939FDE005256C5 /* HHeadViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EBD18A1D939FDE005256C5 /* HHeadViewCell.m */; };
+		C5EBD18E1D93A046005256C5 /* HHeadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EBD18D1D93A046005256C5 /* HHeadViewController.m */; };
+		C5EBD1971D93A502005256C5 /* HHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EBD1961D93A502005256C5 /* HHTTPManager.m */; };
+		C5EBD19A1D93A65A005256C5 /* HAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EBD1991D93A65A005256C5 /* HAPIManager.m */; };
+		C5EBD19D1D93AC77005256C5 /* HHeadLine.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EBD19C1D93AC77005256C5 /* HHeadLine.m */; };
+		C5EBD1A11D93AF7A005256C5 /* NSObject+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EBD1A01D93AF7A005256C5 /* NSObject+Log.m */; };
+		C5EBD1A51D93C58D005256C5 /* HNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EBD1A41D93C58D005256C5 /* HNewsController.m */; };
+		C5EBD1A81D93CC21005256C5 /* HNewsData.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EBD1A71D93CC21005256C5 /* HNewsData.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		09A9D64092BD57B1D26F2587 /* libPods-网易新闻练手.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-网易新闻练手.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1AF2B1C5329C008BF0DE24 /* Pods-网易新闻练手.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易新闻练手.debug.xcconfig"; path = "Pods/Target Support Files/Pods-网易新闻练手/Pods-网易新闻练手.debug.xcconfig"; sourceTree = "<group>"; };
+		C566CEA81D93D4210008A31B /* HNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNewsCell.h; sourceTree = "<group>"; };
+		C566CEA91D93D4210008A31B /* HNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNewsCell.m; sourceTree = "<group>"; };
+		C566CEAB1D94127A0008A31B /* HChannelLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HChannelLabel.h; sourceTree = "<group>"; };
+		C566CEAC1D94127A0008A31B /* HChannelLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HChannelLabel.m; sourceTree = "<group>"; };
+		C566CEAF1D9412D60008A31B /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		C566CEB11D9414060008A31B /* HChannelLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HChannelLabelView.h; sourceTree = "<group>"; };
+		C566CEB21D9414060008A31B /* HChannelLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HChannelLabelView.m; sourceTree = "<group>"; };
+		C566CEB51D9414570008A31B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C566CEB71D9415D40008A31B /* HChannelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HChannelController.h; sourceTree = "<group>"; };
+		C566CEB81D9415D40008A31B /* HChannelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HChannelController.m; sourceTree = "<group>"; };
+		C566CEBD1D9417930008A31B /* UIView+HMExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HMExt.h"; sourceTree = "<group>"; };
+		C566CEBE1D9417930008A31B /* UIView+HMExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HMExt.m"; sourceTree = "<group>"; };
+		C5D4DE1D1D94AC6D00B7CE9E /* HMoreImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMoreImage.h; sourceTree = "<group>"; };
+		C5D4DE1E1D94AC6D00B7CE9E /* HMoreImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMoreImage.m; sourceTree = "<group>"; };
+		C5D4DE201D94B3F000B7CE9E /* HChannelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HChannelCell.h; sourceTree = "<group>"; };
+		C5D4DE211D94B3F000B7CE9E /* HChannelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HChannelCell.m; sourceTree = "<group>"; };
+		C5EBD16D1D939EAB005256C5 /* 网易新闻练手.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易新闻练手.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5EBD1711D939EAB005256C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C5EBD1731D939EAB005256C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C5EBD1741D939EAB005256C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C5EBD17C1D939EAB005256C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5EBD17F1D939EAB005256C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C5EBD1811D939EAB005256C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5EBD1871D939ED9005256C5 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		C5EBD1891D939FDE005256C5 /* HHeadViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHeadViewCell.h; sourceTree = "<group>"; };
+		C5EBD18A1D939FDE005256C5 /* HHeadViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHeadViewCell.m; sourceTree = "<group>"; };
+		C5EBD18C1D93A046005256C5 /* HHeadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHeadViewController.h; sourceTree = "<group>"; };
+		C5EBD18D1D93A046005256C5 /* HHeadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHeadViewController.m; sourceTree = "<group>"; };
+		C5EBD1951D93A502005256C5 /* HHTTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHTTPManager.h; sourceTree = "<group>"; };
+		C5EBD1961D93A502005256C5 /* HHTTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHTTPManager.m; sourceTree = "<group>"; };
+		C5EBD1981D93A65A005256C5 /* HAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAPIManager.h; sourceTree = "<group>"; };
+		C5EBD1991D93A65A005256C5 /* HAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAPIManager.m; sourceTree = "<group>"; };
+		C5EBD19B1D93AC77005256C5 /* HHeadLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHeadLine.h; sourceTree = "<group>"; };
+		C5EBD19C1D93AC77005256C5 /* HHeadLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHeadLine.m; sourceTree = "<group>"; };
+		C5EBD19F1D93AF7A005256C5 /* NSObject+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Log.h"; sourceTree = "<group>"; };
+		C5EBD1A01D93AF7A005256C5 /* NSObject+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Log.m"; sourceTree = "<group>"; };
+		C5EBD1A31D93C58D005256C5 /* HNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNewsController.h; sourceTree = "<group>"; };
+		C5EBD1A41D93C58D005256C5 /* HNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNewsController.m; sourceTree = "<group>"; };
+		C5EBD1A61D93CC21005256C5 /* HNewsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNewsData.h; sourceTree = "<group>"; };
+		C5EBD1A71D93CC21005256C5 /* HNewsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNewsData.m; sourceTree = "<group>"; };
+		DB84A5327F28770477E3B59D /* Pods-网易新闻练手.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易新闻练手.release.xcconfig"; path = "Pods/Target Support Files/Pods-网易新闻练手/Pods-网易新闻练手.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5EBD16A1D939EAB005256C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				771963802FFAF7260429ABC4 /* libPods-网易新闻练手.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03D1D6E594DADC06A38DDE34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09A9D64092BD57B1D26F2587 /* libPods-网易新闻练手.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		724E2821FDEE2F866458EC2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AF2B1C5329C008BF0DE24 /* Pods-网易新闻练手.debug.xcconfig */,
+				DB84A5327F28770477E3B59D /* Pods-网易新闻练手.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C566CEAE1D94127E0008A31B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C566CEAB1D94127A0008A31B /* HChannelLabel.h */,
+				C566CEAC1D94127A0008A31B /* HChannelLabel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C566CEB41D94140B0008A31B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C566CEB11D9414060008A31B /* HChannelLabelView.h */,
+				C566CEB21D9414060008A31B /* HChannelLabelView.m */,
+				C5D4DE201D94B3F000B7CE9E /* HChannelCell.h */,
+				C5D4DE211D94B3F000B7CE9E /* HChannelCell.m */,
+				C566CEB51D9414570008A31B /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C566CEBA1D9415D70008A31B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C566CEB71D9415D40008A31B /* HChannelController.h */,
+				C566CEB81D9415D40008A31B /* HChannelController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C566CEBB1D9415F80008A31B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C566CEAE1D94127E0008A31B /* Model */,
+				C566CEB41D94140B0008A31B /* View */,
+				C566CEBA1D9415D70008A31B /* Controller */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		C566CEBC1D9416150008A31B /* Clasess */ = {
+			isa = PBXGroup;
+			children = (
+				C5EBD18F1D93A1FE005256C5 /* Other */,
+				C566CEBB1D9415F80008A31B /* Home */,
+				C5EBD1A21D93B01E005256C5 /* News */,
+				C5EBD1701D939EAB005256C5 /* Supporting Files */,
+			);
+			name = Clasess;
+			sourceTree = "<group>";
+		};
+		C5EBD1641D939EAB005256C5 = {
+			isa = PBXGroup;
+			children = (
+				C5EBD16F1D939EAB005256C5 /* 网易新闻练手 */,
+				C5EBD16E1D939EAB005256C5 /* Products */,
+				724E2821FDEE2F866458EC2F /* Pods */,
+				03D1D6E594DADC06A38DDE34 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C5EBD16E1D939EAB005256C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5EBD16D1D939EAB005256C5 /* 网易新闻练手.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5EBD16F1D939EAB005256C5 /* 网易新闻练手 */ = {
+			isa = PBXGroup;
+			children = (
+				C566CEBC1D9416150008A31B /* Clasess */,
+			);
+			path = "网易新闻练手";
+			sourceTree = "<group>";
+		};
+		C5EBD1701D939EAB005256C5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5EBD1731D939EAB005256C5 /* AppDelegate.h */,
+				C5EBD1741D939EAB005256C5 /* AppDelegate.m */,
+				C5EBD17C1D939EAB005256C5 /* Assets.xcassets */,
+				C5EBD17E1D939EAB005256C5 /* LaunchScreen.storyboard */,
+				C566CEAF1D9412D60008A31B /* topic_news.json */,
+				C5EBD1811D939EAB005256C5 /* Info.plist */,
+				C5EBD1711D939EAB005256C5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5EBD18F1D93A1FE005256C5 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				C566CEBD1D9417930008A31B /* UIView+HMExt.h */,
+				C566CEBE1D9417930008A31B /* UIView+HMExt.m */,
+				C5EBD19F1D93AF7A005256C5 /* NSObject+Log.h */,
+				C5EBD1A01D93AF7A005256C5 /* NSObject+Log.m */,
+				C5EBD1951D93A502005256C5 /* HHTTPManager.h */,
+				C5EBD1961D93A502005256C5 /* HHTTPManager.m */,
+				C5EBD1981D93A65A005256C5 /* HAPIManager.h */,
+				C5EBD1991D93A65A005256C5 /* HAPIManager.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		C5EBD1901D93A207005256C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C5EBD1871D939ED9005256C5 /* News.storyboard */,
+				C5EBD1891D939FDE005256C5 /* HHeadViewCell.h */,
+				C5EBD18A1D939FDE005256C5 /* HHeadViewCell.m */,
+				C566CEA81D93D4210008A31B /* HNewsCell.h */,
+				C566CEA91D93D4210008A31B /* HNewsCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C5EBD1911D93A20E005256C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C5EBD18C1D93A046005256C5 /* HHeadViewController.h */,
+				C5EBD18D1D93A046005256C5 /* HHeadViewController.m */,
+				C5EBD1A31D93C58D005256C5 /* HNewsController.h */,
+				C5EBD1A41D93C58D005256C5 /* HNewsController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C5EBD19E1D93AC7B005256C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5EBD19B1D93AC77005256C5 /* HHeadLine.h */,
+				C5EBD19C1D93AC77005256C5 /* HHeadLine.m */,
+				C5EBD1A61D93CC21005256C5 /* HNewsData.h */,
+				C5EBD1A71D93CC21005256C5 /* HNewsData.m */,
+				C5D4DE1D1D94AC6D00B7CE9E /* HMoreImage.h */,
+				C5D4DE1E1D94AC6D00B7CE9E /* HMoreImage.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C5EBD1A21D93B01E005256C5 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				C5EBD19E1D93AC7B005256C5 /* Model */,
+				C5EBD1901D93A207005256C5 /* View */,
+				C5EBD1911D93A20E005256C5 /* Controller */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5EBD16C1D939EAB005256C5 /* 网易新闻练手 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5EBD1841D939EAB005256C5 /* Build configuration list for PBXNativeTarget "网易新闻练手" */;
+			buildPhases = (
+				8CAB75D5F846FB399F4799AB /* [CP] Check Pods Manifest.lock */,
+				C5EBD1691D939EAB005256C5 /* Sources */,
+				C5EBD16A1D939EAB005256C5 /* Frameworks */,
+				C5EBD16B1D939EAB005256C5 /* Resources */,
+				05F784E88DBA1BA261BB21EC /* [CP] Embed Pods Frameworks */,
+				18CB38EBF0FBD08320AE203F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "网易新闻练手";
+			productName = "网易新闻练手";
+			productReference = C5EBD16D1D939EAB005256C5 /* 网易新闻练手.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5EBD1651D939EAB005256C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "栈然亦卡安";
+				TargetAttributes = {
+					C5EBD16C1D939EAB005256C5 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = C5EBD1681D939EAB005256C5 /* Build configuration list for PBXProject "网易新闻练手" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C5EBD1641D939EAB005256C5;
+			productRefGroup = C5EBD16E1D939EAB005256C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5EBD16C1D939EAB005256C5 /* 网易新闻练手 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5EBD16B1D939EAB005256C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5EBD1801D939EAB005256C5 /* LaunchScreen.storyboard in Resources */,
+				C566CEB61D9414570008A31B /* Main.storyboard in Resources */,
+				C5EBD17D1D939EAB005256C5 /* Assets.xcassets in Resources */,
+				C566CEB01D9412D60008A31B /* topic_news.json in Resources */,
+				C5EBD1881D939ED9005256C5 /* News.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05F784E88DBA1BA261BB21EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-网易新闻练手/Pods-网易新闻练手-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18CB38EBF0FBD08320AE203F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-网易新闻练手/Pods-网易新闻练手-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CAB75D5F846FB399F4799AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5EBD1691D939EAB005256C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5EBD1971D93A502005256C5 /* HHTTPManager.m in Sources */,
+				C5EBD1A81D93CC21005256C5 /* HNewsData.m in Sources */,
+				C566CEB91D9415D40008A31B /* HChannelController.m in Sources */,
+				C566CEAA1D93D4210008A31B /* HNewsCell.m in Sources */,
+				C566CEB31D9414060008A31B /* HChannelLabelView.m in Sources */,
+				C5D4DE1F1D94AC6D00B7CE9E /* HMoreImage.m in Sources */,
+				C566CEAD1D94127A0008A31B /* HChannelLabel.m in Sources */,
+				C5D4DE221D94B3F000B7CE9E /* HChannelCell.m in Sources */,
+				C5EBD19A1D93A65A005256C5 /* HAPIManager.m in Sources */,
+				C5EBD1751D939EAB005256C5 /* AppDelegate.m in Sources */,
+				C566CEBF1D9417930008A31B /* UIView+HMExt.m in Sources */,
+				C5EBD1A51D93C58D005256C5 /* HNewsController.m in Sources */,
+				C5EBD19D1D93AC77005256C5 /* HHeadLine.m in Sources */,
+				C5EBD18E1D93A046005256C5 /* HHeadViewController.m in Sources */,
+				C5EBD1721D939EAB005256C5 /* main.m in Sources */,
+				C5EBD1A11D93AF7A005256C5 /* NSObject+Log.m in Sources */,
+				C5EBD18B1D939FDE005256C5 /* HHeadViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C5EBD17E1D939EAB005256C5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5EBD17F1D939EAB005256C5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5EBD1821D939EAB005256C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C5EBD1831D939EAB005256C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5EBD1851D939EAB005256C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D1AF2B1C5329C008BF0DE24 /* Pods-网易新闻练手.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "网易新闻练手/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HLB.------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C5EBD1861D939EAB005256C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB84A5327F28770477E3B59D /* Pods-网易新闻练手.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "网易新闻练手/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HLB.------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5EBD1681D939EAB005256C5 /* Build configuration list for PBXProject "网易新闻练手" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5EBD1821D939EAB005256C5 /* Debug */,
+				C5EBD1831D939EAB005256C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5EBD1841D939EAB005256C5 /* Build configuration list for PBXNativeTarget "网易新闻练手" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5EBD1851D939EAB005256C5 /* Debug */,
+				C5EBD1861D939EAB005256C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5EBD1651D939EAB005256C5 /* Project object */;
+}
