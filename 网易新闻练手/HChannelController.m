@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic,strong) NSArray *channels;
+@property (nonatomic, assign) NSInteger currentPage;
 @end
 
 @implementation HChannelController
@@ -75,5 +76,31 @@
     HChannelCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HCELL" forIndexPath:indexPath];
     cell.labels = self.channels[indexPath.item];
     return cell;
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    HChannelLabelView *currentLabel = self.scrollView.subviews[self.currentPage];
+    NSArray *index = [self.collectionView indexPathsForVisibleItems];
+    __block HChannelLabelView *nextLabel;
+    [index enumerateObjectsUsingBlock:^(NSIndexPath *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.item != self.currentPage) {
+            nextLabel = self.scrollView.subviews[obj.item];
+        }
+        
+        if (nextLabel == nil) {
+            return ;
+        }
+        
+        CGFloat offsetX = scrollView.contentOffset.x;
+        CGFloat scale = ABS(offsetX / scrollView.width - self.currentPage);
+        CGFloat currentScale = 1 - scale;
+        currentLabel.scale = currentScale;
+        nextLabel.scale = scale;
+        
+    }];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    CGFloat offsetX = scrollView.contentOffset.x;
+    self.currentPage = offsetX / scrollView.width;
 }
 @end

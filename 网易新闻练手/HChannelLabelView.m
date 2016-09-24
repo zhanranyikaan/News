@@ -7,21 +7,30 @@
 //
 
 #import "HChannelLabelView.h"
+#define HSelectedFont 18.f
+#define HNormalFont 14.f
 
 @implementation HChannelLabelView
 
 + (instancetype)channelLabelWithTitle:(NSString *)title {
     HChannelLabelView *label = [[HChannelLabelView alloc] init];
     label.text = title;
-    label.font = [UIFont systemFontOfSize:18];
+    label.font = [UIFont systemFontOfSize:HSelectedFont];
     
     [label sizeToFit];
-    label.font = [UIFont systemFontOfSize:14];
+    label.font = [UIFont systemFontOfSize:HNormalFont];
     label.textAlignment = NSTextAlignmentCenter;
     label.userInteractionEnabled = YES;
     return label;
 }
 
+- (void)setScale:(CGFloat)scale {
+    _scale = scale;
+    self.textColor = [UIColor colorWithRed:scale green:0 blue:0 alpha:1];
+    CGFloat percent = (HSelectedFont - HNormalFont)/HSelectedFont * scale;
+    _scale = percent+ 1;
+    self.transform = CGAffineTransformMakeScale(_scale, _scale);
+}
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"%@",self.text);
 }

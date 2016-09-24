@@ -10,4 +10,5 @@
 
 @interface HChannelLabelView : UILabel
 + (instancetype)channelLabelWithTitle:(NSString *)title;
+@property (nonatomic, assign) CGFloat scale;
 @end
