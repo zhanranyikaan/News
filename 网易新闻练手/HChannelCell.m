@@ -11,24 +11,15 @@
 #import "HNewsController.h"
 
 @interface HChannelCell ()
-@property (nonatomic,strong) HNewsController *news;
+
 
 @end
 @implementation HChannelCell
 
-- (void)awakeFromNib {
-    UIStoryboard *st = [UIStoryboard storyboardWithName:@"News" bundle:nil];
-    HNewsController *newVc = [st instantiateInitialViewController];
-    
-    [self.contentView addSubview:newVc.view];
-    newVc.view.frame = self.contentView.bounds;
-    self.news = newVc;
-    
-}
 - (void)setLabels:(HChannelLabel *)labels {
-    _labels = labels;
-    NSString *stringURL = [NSString stringWithFormat:@"article/headline/%@/0-20.html",_labels.tid];
-    self.news.stringURL = stringURL;
+//    _labels = labels;
+//    NSString *stringURL = [NSString stringWithFormat:@"article/headline/%@/0-20.html",_labels.tid];
+//    self.news.stringURL = stringURL;
 }
 
 @end

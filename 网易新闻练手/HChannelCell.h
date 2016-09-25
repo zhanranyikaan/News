@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@class HChannelLabel;
+@class HChannelLabel,HNewsController;
 @interface HChannelCell : UICollectionViewCell
 @property (nonatomic,strong) HChannelLabel *labels;
+@property (nonatomic,strong) HNewsController *news;
 
 @end

@@ -140,9 +140,9 @@
 		C566CEBB1D9415F80008A31B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C566CEBA1D9415D70008A31B /* Controller */,
 				C566CEAE1D94127E0008A31B /* Model */,
 				C566CEB41D94140B0008A31B /* View */,
-				C566CEBA1D9415D70008A31B /* Controller */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -252,9 +252,9 @@
 		C5EBD1A21D93B01E005256C5 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				C5EBD1911D93A20E005256C5 /* Controller */,
 				C5EBD19E1D93AC7B005256C5 /* Model */,
 				C5EBD1901D93A207005256C5 /* View */,
-				C5EBD1911D93A20E005256C5 /* Controller */,
 			);
 			name = News;
 			sourceTree = "<group>";

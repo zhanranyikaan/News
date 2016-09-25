@@ -35,6 +35,8 @@
    
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%@",self.text);
+    if (self.clickChannel) {
+        self.clickChannel();
+    }
 }
 @end

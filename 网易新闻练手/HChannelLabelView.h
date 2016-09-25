@@ -13,4 +13,7 @@
 + (instancetype)channelLabelWithTitle:(NSString *)title;
 //缩放比例
 @property (nonatomic, assign) CGFloat scale;
+
+//点击回调
+@property (nonatomic,copy) void (^clickChannel)();
 @end

@@ -11,6 +11,7 @@
 #import "HChannelLabelView.h"
 #import "HChannelCell.h"
 #import "UIView+HMExt.h"
+#import "HNewsController.h"
 
 @interface HChannelController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -19,17 +20,26 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic,strong) NSArray *channels;
 @property (nonatomic, assign) NSInteger currentPage;
+
+//控制器缓存
+@property (nonatomic,strong) NSMutableDictionary *controllerCache;
 @end
 
 @implementation HChannelController
 
+- (NSMutableDictionary *)controllerCache {
+    if (_controllerCache == nil) {
+        _controllerCache = [NSMutableDictionary dictionary];
+    }
+    return _controllerCache;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-     [self loadData];
+   
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     self.automaticallyAdjustsScrollViewInsets = NO;
-   
+     [self loadData];
 }
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
@@ -64,6 +74,28 @@
         if (idx == 0) {
             label.scale = 1;
         }
+        
+        __weak typeof(label) weakLabel = label;
+        __weak typeof(self) weakSelf = self;
+        [label setClickChannel:^{
+            
+            NSIndexPath *index = [NSIndexPath indexPathForItem:idx inSection:0];
+            
+            [weakSelf.collectionView scrollToItemAtIndexPath:index atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+            
+            
+            HChannelLabelView *currentLabel  = weakSelf.scrollView.subviews[weakSelf.currentPage];
+            
+            if (currentLabel == weakSelf) {
+                return ;
+            }
+            currentLabel.scale = 0;
+            weakLabel.scale = 1;
+            weakSelf.currentPage = idx;
+            [weakSelf adjOffset];
+            
+        }];
+        
         CGFloat labelW = label.width;
         label.frame = CGRectMake(labelX, labelY, labelW, labelH);
         [self.scrollView addSubview:label];
@@ -80,10 +112,35 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     HChannelCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HCELL" forIndexPath:indexPath];
+    
+    [cell.news.view removeFromSuperview];
     cell.labels = self.channels[indexPath.item];
+    
+    HChannelLabel *channel = self.channels[indexPath.item];
+    HNewsController *new = [self controllerWithChannel:channel];
+    
+    [cell.contentView addSubview:new.view];
+    new.view.frame = cell.bounds;
+    cell.news = new;
+    
+    if (![self.childViewControllers containsObject:new]) {
+        [self addChildViewController:new];
+    }
     return cell;
 }
 
+- (HNewsController *)controllerWithChannel:(HChannelLabel *)channel {
+    HNewsController *news = [self.controllerCache objectForKey:channel.tname];
+    
+    if (news == nil) {
+        UIStoryboard *st = [UIStoryboard storyboardWithName:@"News" bundle:nil];
+        news = [st instantiateInitialViewController];
+        NSString *urlstring = [NSString stringWithFormat:@"article/headline/%@/0-20.html",channel.tid];
+        news.stringURL = urlstring;
+        [self.controllerCache setObject:news forKey:channel.tname];
+    }
+    return news;
+}
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     HChannelLabelView *currentLabel = self.scrollView.subviews[self.currentPage];
@@ -114,4 +171,34 @@
     CGFloat offsetX = scrollView.contentOffset.x;
     self.currentPage = offsetX / scrollView.width;
 }
+
+- (void)adjOffset {
+    // 取出选中的label
+    // 取出当前选中的label
+    HChannelLabelView *currentLabel = self.scrollView.subviews[self.currentPage];
+    
+    // 取出选中的label的x值
+    CGFloat labelX = currentLabel.x;
+    CGFloat offsetX = 0;
+    if (labelX > self.scrollView.width * 0.5) {
+        // 偏移的offset值
+        offsetX = labelX - self.scrollView.width * 0.5;
+    }
+    
+    
+    // 判断offset 跟 contentSize 的关系
+    if (labelX > (self.scrollView.contentSize.width - self.scrollView.width * 0.5)) {
+        // 偏移的offset值
+        offsetX = (self.scrollView.contentSize.width - self.scrollView.width);
+    }
+    
+    if (labelX < self.scrollView.width * 0.5) {
+        // 偏移的offset值
+        offsetX = 0;
+    }
+    // 设置scrollView的offset
+    [self.scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
+    
+}
+
 @end
