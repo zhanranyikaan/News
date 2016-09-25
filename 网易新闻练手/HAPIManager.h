@@ -12,5 +12,5 @@
 + (instancetype)sharedManager;
 - (void)requestHeadLineWithCompletionHandle:(void(^)(id responseObject,NSError *error))completionHandle;
 
-- (void)requestNewsDataWithCompletionHandle:(void(^)(id responseObject,NSError *error))completionHandle;
+- (void)requestNewsDataWithPath:(NSString *)path CompletionHandle:(void(^)(id responseObject,NSError *error))completionHandle;
 @end

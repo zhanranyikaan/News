@@ -20,16 +20,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadData];
-    self.tableView.tableFooterView = [[UIView alloc] init];
+     self.tableView.tableFooterView = [[UIView alloc] init];
+    
+   
 }
-//- (void)setStringURL:(NSString *)stringURL {
-//    _stringURL = stringURL;
-//    [self loadData];
-//}
+- (void)setStringURL:(NSString *)stringURL {
+    _stringURL = stringURL;
+    [self loadData];
+}
 #pragma mark 加载数据
 - (void)loadData {
-    [HNewsData newsDataWithCompletion:^(NSArray *data) {
+    [HNewsData newsDataWithPath:self.stringURL Completion:^(NSArray *data) {
 //        NSLog(@"%@",data);
         self.data = data;
         [self.tableView reloadData];

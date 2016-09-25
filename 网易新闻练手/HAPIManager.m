@@ -23,7 +23,7 @@
     [[HHTTPManager sharedManager]GET:@"ad/headline/0-4.html" parameters:nil completionHandle:completionHandle];
 }
 
-- (void)requestNewsDataWithCompletionHandle:(void (^)(id, NSError *))completionHandle {
-    [[HHTTPManager sharedManager]GET:@"article/headline/T1348649580692/0-20.html" parameters:nil completionHandle:completionHandle];
+- (void)requestNewsDataWithPath:(NSString *)path CompletionHandle:(void (^)(id, NSError *))completionHandle {
+    [[HHTTPManager sharedManager]GET:path parameters:nil completionHandle:completionHandle];
 }
 @end

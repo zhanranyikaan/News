@@ -12,8 +12,8 @@
 #import <YYModel/YYModel.h>
 
 @implementation HNewsData
-+ (void)newsDataWithCompletion:(void (^)(NSArray *))completion {
-    [[HAPIManager sharedManager]requestNewsDataWithCompletionHandle:^(NSDictionary * responseObject, NSError *error) {
++ (void)newsDataWithPath:(NSString *)path Completion:(void (^)(NSArray *))completion {
+    [[HAPIManager sharedManager]requestNewsDataWithPath:path CompletionHandle:^(NSDictionary * responseObject, NSError *error) {
         if (responseObject) {
             NSString *key = responseObject.keyEnumerator.nextObject;
             NSArray *data = responseObject[key];

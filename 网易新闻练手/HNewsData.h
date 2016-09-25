@@ -19,5 +19,5 @@
 //图片类型
 @property (nonatomic,copy) NSString *imgType;
 
-+ (void)newsDataWithCompletion:(void(^)(NSArray *data))completion;
++ (void)newsDataWithPath:(NSString *)path Completion:(void(^)(NSArray *data))completion;
 @end
