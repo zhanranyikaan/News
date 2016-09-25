@@ -13,6 +13,8 @@
 @property (nonatomic,copy) NSString *title;
 @property (nonatomic,copy) NSString *digest;
 @property (nonatomic,copy) NSString *replyCount;
+@property (nonatomic,copy) NSString *docid;
+@property (nonatomic,copy) NSString *detailURL;
 
 //多张图片
 @property (nonatomic,strong) NSArray *imgextra;

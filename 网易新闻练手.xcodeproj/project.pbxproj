@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		771963802FFAF7260429ABC4 /* libPods-网易新闻练手.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A9D64092BD57B1D26F2587 /* libPods-网易新闻练手.a */; };
+		C50C3FDC1D97966C00889062 /* HDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50C3FDB1D97966C00889062 /* HDetailViewController.m */; };
+		C50C3FDE1D9798BF00889062 /* detail.html in Resources */ = {isa = PBXBuildFile; fileRef = C50C3FDD1D9798BF00889062 /* detail.html */; };
 		C566CEAA1D93D4210008A31B /* HNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C566CEA91D93D4210008A31B /* HNewsCell.m */; };
 		C566CEAD1D94127A0008A31B /* HChannelLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C566CEAC1D94127A0008A31B /* HChannelLabel.m */; };
 		C566CEB01D9412D60008A31B /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = C566CEAF1D9412D60008A31B /* topic_news.json */; };
@@ -35,6 +37,9 @@
 /* Begin PBXFileReference section */
 		09A9D64092BD57B1D26F2587 /* libPods-网易新闻练手.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-网易新闻练手.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1AF2B1C5329C008BF0DE24 /* Pods-网易新闻练手.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易新闻练手.debug.xcconfig"; path = "Pods/Target Support Files/Pods-网易新闻练手/Pods-网易新闻练手.debug.xcconfig"; sourceTree = "<group>"; };
+		C50C3FDA1D97966C00889062 /* HDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDetailViewController.h; sourceTree = "<group>"; };
+		C50C3FDB1D97966C00889062 /* HDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDetailViewController.m; sourceTree = "<group>"; };
+		C50C3FDD1D9798BF00889062 /* detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = detail.html; sourceTree = "<group>"; };
 		C566CEA81D93D4210008A31B /* HNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNewsCell.h; sourceTree = "<group>"; };
 		C566CEA91D93D4210008A31B /* HNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNewsCell.m; sourceTree = "<group>"; };
 		C566CEAB1D94127A0008A31B /* HChannelLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HChannelLabel.h; sourceTree = "<group>"; };
@@ -190,6 +195,7 @@
 				C5EBD1731D939EAB005256C5 /* AppDelegate.h */,
 				C5EBD1741D939EAB005256C5 /* AppDelegate.m */,
 				C5EBD17C1D939EAB005256C5 /* Assets.xcassets */,
+				C50C3FDD1D9798BF00889062 /* detail.html */,
 				C5EBD17E1D939EAB005256C5 /* LaunchScreen.storyboard */,
 				C566CEAF1D9412D60008A31B /* topic_news.json */,
 				C5EBD1811D939EAB005256C5 /* Info.plist */,
@@ -232,6 +238,8 @@
 				C5EBD18D1D93A046005256C5 /* HHeadViewController.m */,
 				C5EBD1A31D93C58D005256C5 /* HNewsController.h */,
 				C5EBD1A41D93C58D005256C5 /* HNewsController.m */,
+				C50C3FDA1D97966C00889062 /* HDetailViewController.h */,
+				C50C3FDB1D97966C00889062 /* HDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -322,6 +330,7 @@
 				C5EBD1801D939EAB005256C5 /* LaunchScreen.storyboard in Resources */,
 				C566CEB61D9414570008A31B /* Main.storyboard in Resources */,
 				C5EBD17D1D939EAB005256C5 /* Assets.xcassets in Resources */,
+				C50C3FDE1D9798BF00889062 /* detail.html in Resources */,
 				C566CEB01D9412D60008A31B /* topic_news.json in Resources */,
 				C5EBD1881D939ED9005256C5 /* News.storyboard in Resources */,
 			);
@@ -392,6 +401,7 @@
 				C5D4DE221D94B3F000B7CE9E /* HChannelCell.m in Sources */,
 				C5EBD19A1D93A65A005256C5 /* HAPIManager.m in Sources */,
 				C5EBD1751D939EAB005256C5 /* AppDelegate.m in Sources */,
+				C50C3FDC1D97966C00889062 /* HDetailViewController.m in Sources */,
 				C566CEBF1D9417930008A31B /* UIView+HMExt.m in Sources */,
 				C5EBD1A51D93C58D005256C5 /* HNewsController.m in Sources */,
 				C5EBD19D1D93AC77005256C5 /* HHeadLine.m in Sources */,

@@ -12,6 +12,11 @@
 #import <YYModel/YYModel.h>
 
 @implementation HNewsData
+
+- (void)setDocid:(NSString *)docid {
+    _docid = docid;
+    self.detailURL = [NSString stringWithFormat:@"article/%@/full.html",docid];
+}
 + (void)newsDataWithPath:(NSString *)path Completion:(void (^)(NSArray *))completion {
     [[HAPIManager sharedManager]requestNewsDataWithPath:path CompletionHandle:^(NSDictionary * responseObject, NSError *error) {
         if (responseObject) {

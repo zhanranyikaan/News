@@ -9,6 +9,7 @@
 #import "HNewsController.h"
 #import "HNewsData.h"
 #import "HNewsCell.h"
+#import "HDetailViewController.h"
 
 @interface HNewsController ()
 @property (weak, nonatomic) IBOutlet UIView *headLineView;
@@ -45,7 +46,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HNewsData *news = self.data[indexPath.item];
     HNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:[HNewsCell cellIdentifierWithNews:news] forIndexPath:indexPath];
-    cell.news = self.data[indexPath.item];
+    
+    cell.news = news;
     return cell;
 }
 
@@ -53,5 +55,15 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     HNewsData *news = self.data[indexPath.item];
     return [HNewsCell cellHeightWithNews:news];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 取出对应的新闻
+    HNewsData *news = self.data[indexPath.row];
+    // 初始化详情页控制器
+    HDetailViewController *detail = [[HDetailViewController alloc]init];
+    // 设置详情页的URL
+    detail.detailURL = news.detailURL;
+    [self.navigationController pushViewController:detail animated:YES];
 }
 @end
