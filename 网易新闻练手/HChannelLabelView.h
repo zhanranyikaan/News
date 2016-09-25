@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface HChannelLabelView : UILabel
+//创建一个频道的label
 + (instancetype)channelLabelWithTitle:(NSString *)title;
+//缩放比例
 @property (nonatomic, assign) CGFloat scale;
 @end

@@ -25,10 +25,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     [self loadData];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     self.automaticallyAdjustsScrollViewInsets = NO;
-    [self loadData];
+   
 }
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
@@ -58,6 +59,11 @@
         CGFloat labelY = 0;
         CGFloat labelH = self.scrollView.height;
         HChannelLabelView *label = [HChannelLabelView channelLabelWithTitle:obj.tname];
+        
+        //如果选中第一个
+        if (idx == 0) {
+            label.scale = 1;
+        }
         CGFloat labelW = label.width;
         label.frame = CGRectMake(labelX, labelY, labelW, labelH);
         [self.scrollView addSubview:label];
@@ -77,15 +83,20 @@
     cell.labels = self.channels[indexPath.item];
     return cell;
 }
+
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     HChannelLabelView *currentLabel = self.scrollView.subviews[self.currentPage];
     NSArray *index = [self.collectionView indexPathsForVisibleItems];
+    
+    //记录即将被选中的label
     __block HChannelLabelView *nextLabel;
     [index enumerateObjectsUsingBlock:^(NSIndexPath *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (obj.item != self.currentPage) {
             nextLabel = self.scrollView.subviews[obj.item];
         }
-        
+    }];
+    
         if (nextLabel == nil) {
             return ;
         }
@@ -96,7 +107,7 @@
         currentLabel.scale = currentScale;
         nextLabel.scale = scale;
         
-    }];
+    
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {

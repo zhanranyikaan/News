@@ -27,9 +27,12 @@
 - (void)setScale:(CGFloat)scale {
     _scale = scale;
     self.textColor = [UIColor colorWithRed:scale green:0 blue:0 alpha:1];
-    CGFloat percent = (HSelectedFont - HNormalFont)/HSelectedFont * scale;
-    _scale = percent+ 1;
+    CGFloat percent = (HSelectedFont - HNormalFont) / HSelectedFont * scale;
+    
+    //选中字体的缩放比例为放大
+    _scale = percent + 1;
     self.transform = CGAffineTransformMakeScale(_scale, _scale);
+   
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"%@",self.text);

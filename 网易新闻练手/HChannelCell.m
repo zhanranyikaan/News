@@ -17,12 +17,13 @@
 @implementation HChannelCell
 
 - (void)awakeFromNib {
-    [super awakeFromNib];
     UIStoryboard *st = [UIStoryboard storyboardWithName:@"News" bundle:nil];
-    HNewsController *news = [st instantiateInitialViewController];
-    [self.contentView addSubview:news.view];
-    news.view.frame = self.contentView.bounds;
-    self.news = news;
+    HNewsController *newVc = [st instantiateInitialViewController];
+    
+    [self.contentView addSubview:newVc.view];
+    newVc.view.frame = self.contentView.bounds;
+    self.news = newVc;
+    
 }
 - (void)setLabels:(HChannelLabel *)labels {
     _labels = labels;
